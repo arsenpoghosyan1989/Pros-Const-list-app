@@ -1,3 +1,7 @@
+/**
+ * @file
+ * Contains functions.
+ */
 
 export const dFlex = ({ justify, align, self, flex_size, direction }) => {
     return `

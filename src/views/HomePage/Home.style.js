@@ -8,8 +8,8 @@ import styled from 'styled-components';
 
 export const HomeContainerStyled = styled.div`
   width: 555px;
-  color: ${(props) => props.theme.colors.dark.main};
-  box-shadow: 0px 0px 3px 1px #a2a2a2;
+  color: ${(props) => props.theme.colors.white};
+  box-shadow: ${(props) => props.theme.shadow.boxShadow};
   background-color: ${(props) => props.theme.colors.dark.secondary};
 
   @media ${(props) => props.theme.device.tablet} {
