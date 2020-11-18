@@ -4,11 +4,7 @@
  */
 
 import React from 'react';
-import {
-  HomeContainerStyled,
-  ProsConsContainer,
-  Block,
-} from './Home.style';
+import { HomeContainerStyled, ProsConsContainer, Block } from './Home.style';
 import Header from '../components/Header';
 import Input from '../components/Input';
 import { connect } from 'react-redux';
@@ -17,13 +13,20 @@ import { onChange } from '../../redux/actions';
 const Home = ({ pros, cons, onChange }) => {
   return (
     <HomeContainerStyled>
-      <Header title='Should I eat at McDonalds?'/>
-      <ProsConsContainer height='40px'>
-        <Block marginR='1px'>PROS</Block>
+      <Header title='Should I eat at McDonalds?' />
+      <ProsConsContainer styles={{ height: '40px' }}>
+        <Block styles={{ marginR: '1px', justify: 'center' }}>PROS</Block>
         <Block>CONS</Block>
       </ProsConsContainer>
-      <ProsConsContainer height='400px' marginT='0.5px'>
-        <Block justify='flex-start' direction='column' overflow='auto' marginR='1px'>
+      <ProsConsContainer styles={{ height: '400px', marginT: '0.5px' }}>
+        <Block
+          styles={{
+            justify: 'flex-start',
+            direction: 'column',
+            overflow: 'auto',
+            marginR: '1px',
+          }}
+        >
           {cons.map((item, id) => (
             <Input
               value={item}
@@ -35,7 +38,13 @@ const Home = ({ pros, cons, onChange }) => {
             />
           ))}
         </Block>
-        <Block justify='flex-start' direction='column' overflow='auto'>
+        <Block
+          styles={{
+            justify: 'flex-start',
+            direction: 'column',
+            overflow: 'auto',
+          }}
+        >
           {pros.map((item, id) => (
             <Input
               value={item}
@@ -60,7 +69,7 @@ const mapDispatchToProps = (dispatch) => {
   return {
     onChange: (info) => {
       dispatch(onChange(info));
-    },
+    }
   };
 };
 
