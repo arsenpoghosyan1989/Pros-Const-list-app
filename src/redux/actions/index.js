@@ -1,23 +1,6 @@
-const booksRequested = function () {
+const onChange = function (info) {
     return {
-        type: 'FETCH_BOOKS_REQUEST',
-    }
-}
-const booksLoaded = function (newBooks) {
-    return {
-        type: 'FETCH_BOOKS_SUCCESS',
-        payload: newBooks,
-    }
-}
-const booksError = function (err) {
-    return {
-        type: 'FETCH_BOOKS_FAILURE',
-        payload: err,
-    }
-}
-const addItemToCart = function (info) {
-    return {
-        type: 'ADD_ITEM_TO_CART',
+        type: 'CHANGE',
         payload: info,
     }
 }
@@ -40,18 +23,8 @@ const itemDelete = function (id) {
     }
 }
 
-const fetchBooks = (bookStoreService, dispatch) => () => {
-    dispatch(booksRequested());
-    bookStoreService
-        .getBooks()
-        .then((data) => dispatch(booksLoaded(data)))
-        .catch((err) => dispatch(booksError(err)));
-}
-
-
 export {
-    fetchBooks,
-    addItemToCart,
+    onChange,
     itemDecress,
     itemIncress,
     itemDelete,

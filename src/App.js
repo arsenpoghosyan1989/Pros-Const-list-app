@@ -1,11 +1,10 @@
 import React from 'react';
-import Home from './views/Home';
+import Home from './views/HomePage';
 import { Container } from './App.style';
 
 const App = function () {
   return (
     <Container>
-      ok
       <Home />
     </Container>
   );

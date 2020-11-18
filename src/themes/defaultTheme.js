@@ -3,15 +3,8 @@
  * Contains default theme settings.
  */
 
-export const mainPurple = '#342688';
-export const secondaryPurple = '#9D92DD';
-export const secondaryPurpleHover = '#B0A3E0';
-export const darkPurple = '#423880';
-export const middlePurple = '#52499E';
-export const lightPurple = '#665CAF';
-export const lightPurpleSec = '#998EDB';
 export const mainDark = '#383636';
-export const secondaryDark = '#BBBBBB';
+export const secondaryDark = '#808080';
 export const thirdDark = '#3F4047';
 export const forthDark = '#686868';
 export const strokeMain = '#F2F2F2';
@@ -46,15 +39,6 @@ const defaultTheme = {
     stroke: strokeMain,
     strokeDarker: strokeSecondary,
     strokeLight: strokeThird,
-    purple: {
-      main: mainPurple,
-      secondary: secondaryPurple,
-      secondaryHover: secondaryPurpleHover,
-      dark: darkPurple,
-      middle: middlePurple,
-      light: lightPurple,
-      lightSecond: lightPurpleSec,
-    },
     black,
     white,
     whiteLight,
@@ -74,13 +58,13 @@ const defaultTheme = {
     boxDarkestShadow: '4px 4px 10px rgba(0, 0, 0, 0.40)',
   },
   border: {
-    main: `1px solid ${mainPurple}`,
+    main: `1px solid ${mainDark}`,
     secondary: `1px solid ${strokeMain}`,
     third: `1px solid ${secondaryDark}`,
     fourth: `1px solid ${strokeSecondary}`,
     error: `1px solid ${red}`,
     success: `1px solid ${green}`,
-    dashedMain: `1px dashed ${mainPurple}`,
+    dashedMain: `1px dashed ${mainDark}`,
     dashedSecondary: `1px dashed ${strokeMain}`,
     dashedThird: `1px dashed ${secondaryDark}`,
     dashedError: `1px dashed ${red}`,
