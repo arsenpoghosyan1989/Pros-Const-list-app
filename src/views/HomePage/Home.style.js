@@ -23,23 +23,3 @@ export const ProsConsContainer = styled.div`
   margin-top: ${(props) =>
     props?.styles?.marginT ? props.styles.marginT : ''};
 `;
-
-export const Block = styled.div`
-  ${({ styles }) =>
-    styles &&
-    dFlex({
-      justify: styles.justify,
-      align: 'center',
-      direction: styles.direction,
-    })};
-  overflow-y: ${(props) =>
-    props?.styles?.overflow ? props.styles.overflow : ''};
-  margin-right: ${(props) =>
-    props?.styles?.marginR ? props.styles.marginR : ''};
-  padding: 10px 20px;
-  background-color: white;
-  width: 100%;
-  height: 100%;
-  font-size: 17px;
-  text-align: center;
-`;
